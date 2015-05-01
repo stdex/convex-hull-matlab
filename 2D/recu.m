@@ -1,4 +1,4 @@
-function p=recu(X,x,t)
+function p=recu(X,x)
     Xd=X-mean(X);
     xd_n=x-mean(X);
     xd_n=xd_n*exp(1i*pi/2);
@@ -16,5 +16,5 @@ function p=recu(X,x,t)
     if numel(zz)==1
         p=zz(1)
     else
-        p=recu(zz,x,t)
+        p=recu(zz,x)
     end
